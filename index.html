@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenAI Lab - Discover the Future of AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page" class="page active">
+        <div class="container">
+            <header class="header">
+                <h1 class="main-title">GenAI Lab</h1>
+                <p class="main-subtitle">Discover the Future of AI</p>
+            </header>
+            
+            <div class="ai-cards">
+                <div class="ai-card gans-card" data-ai="gans">
+                    <div class="card-content">
+                        <h2>GANs</h2>
+                        <p class="card-tagline">Two AIs Compete to Create Amazing Fakes!</p>
+                        <div class="card-arrow">→</div>
+                    </div>
+                </div>
+                
+                <div class="ai-card rnns-card" data-ai="rnns">
+                    <div class="card-content">
+                        <h2>RNNs</h2>
+                        <p class="card-tagline">AI with Memory - Learns from the Past!</p>
+                        <div class="card-arrow">→</div>
+                    </div>
+                </div>
+                
+                <div class="ai-card vaes-card" data-ai="vaes">
+                    <div class="card-content">
+                        <h2>VAEs</h2>
+                        <p class="card-tagline">Compress, Learn, and Create Variations!</p>
+                        <div class="card-arrow">→</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="progress-summary">
+                <h3>Your Progress</h3>
+                <div class="progress-badges">
+                    <div class="progress-badge" data-ai="gans">
+                        <span class="badge-name">GANs</span>
+                        <span class="badge-status">Not Started</span>
+                    </div>
+                    <div class="progress-badge" data-ai="rnns">
+                        <span class="badge-name">RNNs</span>
+                        <span class="badge-status">Not Started</span>
+                    </div>
+                    <div class="progress-badge" data-ai="vaes">
+                        <span class="badge-name">VAEs</span>
+                        <span class="badge-status">Not Started</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Learning Page Template -->
+    <div id="ai-page" class="page hidden">
+        <div class="container">
+            <nav class="nav-bar">
+                <button class="nav-btn back-btn">← Back to Menu</button>
+                <div class="nav-progress">
+                    <div class="progress-dots">
+                        <span class="dot active" data-section="what"></span>
+                        <span class="dot" data-section="how"></span>
+                        <span class="dot" data-section="examples"></span>
+                        <span class="dot" data-section="demo"></span>
+                        <span class="dot" data-section="quiz"></span>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="ai-header">
+                <h1 class="ai-title" id="ai-title">GANs</h1>
+                <p class="ai-subtitle" id="ai-subtitle">Generative Adversarial Networks</p>
+            </div>
+
+            <!-- What is it Section -->
+            <section id="what-section" class="section active">
+                <div class="section-header">
+                    <h2>What is it?</h2>
+                </div>
+                <div class="content-box">
+                    <p id="ai-description" class="description-text"></p>
+                    <div class="fun-fact">
+                        <h4>💡 Did you know?</h4>
+                        <p id="fun-fact-text"></p>
+                    </div>
+                </div>
+                <button class="next-btn">Next: How it Works →</button>
+            </section>
+
+            <!-- How it Works Section -->
+            <section id="how-section" class="section hidden">
+                <div class="section-header">
+                    <h2>How it Works</h2>
+                </div>
+                <div class="content-box">
+                    <div class="steps-container" id="steps-container">
+                        <!-- Steps will be populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="section-nav">
+                    <button class="prev-btn">← Previous</button>
+                    <button class="next-btn">Next: Examples →</button>
+                </div>
+            </section>
+
+            <!-- Examples Section -->
+            <section id="examples-section" class="section hidden">
+                <div class="section-header">
+                    <h2>Real-World Examples</h2>
+                </div>
+                <div class="content-box">
+                    <div class="examples-grid" id="examples-grid">
+                        <!-- Examples will be populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="section-nav">
+                    <button class="prev-btn">← Previous</button>
+                    <button class="next-btn">Next: Interactive Demo →</button>
+                </div>
+            </section>
+
+            <!-- Interactive Demo Section -->
+            <section id="demo-section" class="section hidden">
+                <div class="section-header">
+                    <h2>Interactive Demo</h2>
+                </div>
+                <div class="content-box">
+                    <div class="demo-container" id="demo-container">
+                        <!-- Demo content will be populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="section-nav">
+                    <button class="prev-btn">← Previous</button>
+                    <button class="next-btn">Next: Quiz →</button>
+                </div>
+            </section>
+
+            <!-- Quiz Section -->
+            <section id="quiz-section" class="section hidden">
+                <div class="section-header">
+                    <h2>Test Your Knowledge</h2>
+                </div>
+                <div class="content-box">
+                    <div class="quiz-container" id="quiz-container">
+                        <div class="question-card" id="question-card">
+                            <div class="question-number">Question <span id="question-num">1</span> of <span id="total-questions">2</span></div>
+                            <h3 class="question-text" id="question-text"></h3>
+                            <div class="options-container" id="options-container">
+                                <!-- Options will be populated by JavaScript -->
+                            </div>
+                            <div class="question-feedback hidden" id="question-feedback">
+                                <p class="feedback-text" id="feedback-text"></p>
+                                <button class="next-question-btn" id="next-question-btn">Next Question</button>
+                            </div>
+                        </div>
+                        <div class="quiz-results hidden" id="quiz-results">
+                            <h3>Great Job!</h3>
+                            <p class="results-text">You scored <span id="score">0</span> out of <span id="total-score">2</span>!</p>
+                            <div class="results-actions">
+                                <button class="retake-btn">Retake Quiz</button>
+                                <button class="complete-btn">Complete Module</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-nav">
+                    <button class="prev-btn">← Previous</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Completion Modal -->
+    <div id="completion-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>🎉 Module Completed!</h2>
+            <p>You've successfully learned about <span id="completed-ai">GANs</span>!</p>
+            <div class="modal-actions">
+                <button class="modal-btn continue-btn">Continue Learning</button>
+                <button class="modal-btn menu-btn">Back to Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
