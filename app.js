@@ -423,7 +423,7 @@ function setupRNNsDemo() {
   const resultEl = document.getElementById('demo-result');
   
   const sentences = [
-    { start: "The weather today is", words: ["sunny", "cloudy", "rainy"], best: "sunny" },
+    { start: "The weather today is", words: ["sunny", "weird", "yummy"], best: "sunny" },
     { start: "I love to eat", words: ["pizza", "books", "music"], best: "pizza" },
     { start: "The cat is", words: ["sleeping", "flying", "swimming"], best: "sleeping" },
     { start: "My favorite color is", words: ["blue", "fast", "loud"], best: "blue" }
